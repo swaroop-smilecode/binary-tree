@@ -19,6 +19,3 @@ def depth_first_values(root_node):
 
 result = depth_first_values(root_node)
 print(result)
-
-  
-   
