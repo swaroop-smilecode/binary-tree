@@ -17,6 +17,7 @@ b.left = d
 b.right = e
 c.right = f
 
+root_node = a
 #     a
 #    / \     
 #   b   c
