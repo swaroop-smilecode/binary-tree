@@ -6,6 +6,7 @@ def depth_first_values(root_node):
     left_values = depth_first_values(root_node.left)
     return [root_node.val, *left_values, *right_values]
 
+
 class Node:
     def __init__(self, val):
         self.val = val
@@ -31,6 +32,7 @@ root_node = a
 #   b   c
 #  / \   \
 # d   e   f
+
 
 result = depth_first_values(root_node)
 print(result)

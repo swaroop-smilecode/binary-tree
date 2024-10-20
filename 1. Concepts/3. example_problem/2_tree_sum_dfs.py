@@ -23,10 +23,12 @@ b.left = d
 b.right = e
 c.right = f
 
+root_node = a
 #       3
 #    /    \
 #   11     4
 #  / \      \
 # 4   -2     1
 
-print(tree_sum(a)) # -> 21
+
+print(tree_sum(root_node)) # -> 21
