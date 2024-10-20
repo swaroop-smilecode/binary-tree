@@ -15,3 +15,6 @@ def tree_sum(root):
     return 0
 ```
 ![image](https://github.com/user-attachments/assets/cbb85e06-3d58-48ee-8e1c-705d27e14552)
+<ins>Recursive step:</ins> </br>
+When values start returning from Base case, if we do below calculation, then will end up with total sum when we reach the root node.</br>
+Sum of tree upto current node = value of current node + returned value from the left tree of current node + returned value from the right tree of current node
