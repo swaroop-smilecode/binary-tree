@@ -1,5 +1,8 @@
 def tree_sum(root):
-    pass
+  if root is None:
+    return 0
+  return root.val + tree_sum(root.left) + tree_sum(root.right)
+
 
 class Node:
     def __init__(self, val):
@@ -26,4 +29,4 @@ c.right = f
 #  / \      \
 # 4   -2     1
 
-tree_sum(a) # -> 21
+print(tree_sum(a)) # -> 21
