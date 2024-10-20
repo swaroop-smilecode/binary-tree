@@ -8,6 +8,7 @@ First thing to do it, assume the Tree as below. Doing so will make it easy to un
 <ins>Base case:</ins>(What is the result of problem for smallest input)</br>
 --> Input is "root node" of tree. "root node" means, not a single node. You are sending root node of the tree, by using which whole tree can be travelled.</br>
 --> So, smallest input means there is no tree --> Which means "root node is None". Sum of all nodes of such a tree is "0".</br>
+--> Also, "return type" of the recursive function(tree_sum) & "return type" of the base case should be same.
 --> So, Base case is:
 ```python
 def tree_sum(root):
