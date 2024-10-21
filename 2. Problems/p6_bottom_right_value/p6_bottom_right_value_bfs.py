@@ -1,5 +1,14 @@
+from collections import deque
+
 def bottom_right_value(root):
-    
+    queue = deque([root])    
+    while queue:
+        current_node = queue.popleft()
+        if current_node.left:
+            queue.append(current_node.left)
+        if current_node.right:
+            queue.append(current_node.right)  
+    return current_node.val
 
 class Node:
     def __init__(self, val):
@@ -27,4 +36,4 @@ root = a
 #  / \      \
 # 4   -2     1
 
-bottom_right_value(root) # -> 1
+print(bottom_right_value(root)) # -> 1
