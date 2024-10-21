@@ -43,5 +43,4 @@ root_node = a
 # d   e   f
 
 
-result = depth_first_values(root_node)
-print(result)
+print(depth_first_values(root_node)) # ['a', 'b', 'd', 'e', 'c', 'f']

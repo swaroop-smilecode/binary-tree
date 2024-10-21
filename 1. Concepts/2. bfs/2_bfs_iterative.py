@@ -45,5 +45,4 @@ root_node = a
 # d   e   f
 
 
-result = breadth_first_values(root_node)
-print(result)
+print(breadth_first_values(root_node)) # ['a', 'b', 'c', 'd', 'e', 'f']
