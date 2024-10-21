@@ -25,10 +25,11 @@ b.left = d
 b.right = e
 c.right = f
 
+root = a
 #       3
 #    /    \
 #   11     4
 #  / \      \
 # 4   -2     1
 
-print(max_path_sum(a)) # -> 18
+print(max_path_sum(root)) # -> 18
