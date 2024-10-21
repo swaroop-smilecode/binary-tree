@@ -1,6 +1,6 @@
 # Since we were creating new list using the syntax [ root.val, *left_path ] & [ root.val, *right_path ],
-# This time we append to the existing list --> But, since appending to list adds at last of the list,
-# we need to perform return result[::-1] at the end.
+# This time we append to the existing list --> But, since appending to list adds at the end of list,
+# we need to perform return result[::-1] at the time of returning final result.
 
 def path_finder(root, target):
   result = _path_finder(root, target)
