@@ -28,8 +28,8 @@ def build_tree_in_post(in_order, post_order):
 
     # So, now you know how many elements are there in the left_in_order & right_in_order
     # The fact that should be recognized is: 
-    # len(left_in_order) = len(left_post_order) 
-    # len(right_in_order) = len(right_post_order)
+    # len(left_in_order) == len(left_post_order) 
+    # len(right_in_order) == len(right_post_order)
     left_post_data = post_order[:len(left_in_order_data)]
     right_post_data = post_order[len(left_in_order_data):-1] # In post_order data, the last element is root node, that's why you exccluding it.
 
