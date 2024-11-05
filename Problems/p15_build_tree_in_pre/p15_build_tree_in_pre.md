@@ -68,9 +68,10 @@ def _build_tree_in_pre(in_order, pre_order, in_start, in_end, pre_start, pre_end
     if (in_end < in_start) or (pre_start < pre_end):
         return None
 
+    value = pre_order[pre_start]
+    root = Node(value)
     mid = in_order.index(value)
     left_size = mid - in_start
     root.left = _build_tree_in_pre(in_order, pre_order, in_start, mid - 1, pre_start + 1, pre_start + left_size)
     root.right = _build_tree_in_pre(in_order, pre_order, mid + 1, in_end, pre_start + left_size + 1, pre_end)
-    return root
 ```
