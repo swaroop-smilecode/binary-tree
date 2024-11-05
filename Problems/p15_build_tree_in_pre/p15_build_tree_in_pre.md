@@ -66,7 +66,7 @@ def build_tree_in_pre(in_order, pre_order):
   
 def _build_tree_in_pre(in_order, pre_order, in_start, in_end, pre_start, pre_end):
     if (in_end < in_start) or (pre_start < pre_end):
-    return None
+        return None
 
     mid = in_order.index(value)
     left_size = mid - in_start
