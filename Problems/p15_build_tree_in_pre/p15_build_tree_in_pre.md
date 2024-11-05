@@ -69,11 +69,8 @@ def _build_tree_in_pre(in_order, pre_order, in_start, in_end, pre_start, pre_end
     return None
 
     mid = in_order.index(value)
-    left_in_order = in_order[:mid]
-    right_in_order = in_order[mid + 1:]
-    left_size = len(left_in_order)
-    left_pre_order = pre_order[1: 1 + left_size]
-    right_pre_order = pre_order[1 + left_size:]
-    root.left = build_tree_in_pre(left_in_order, left_pre_order)
-    root.right = build_tree_in_pre(right_in_order, right_pre_order)
+    left_size = mid - in_start
+    root.left = _build_tree_in_pre(in_order, pre_order, in_start, mid - 1, pre_start + 1, pre_start + left_size)
+    root.right = _build_tree_in_pre(in_order, pre_order, mid + 1, in_end, pre_start + left_size + 1, pre_end)
+    return root
 ```
