@@ -1,4 +1,4 @@
-<ins>Insight 1:</ins></br>
+### Why DFS & BFS are bahaving the way they are behaving?
 Basically a tree can be traversed by using one of the following algorithms.
 1. DFS</br>
 2. BFS</br>
@@ -51,3 +51,5 @@ def breadth_first_values(root_node):
 
     return result
 ```
+### When to use DFS & when to use BFS?
+If the problem is asking for `closest path` / `smallest path`, then go for `BFS`, else `DFS`.
