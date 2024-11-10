@@ -43,6 +43,4 @@ root_node = a
 #   b   c
 #  / \   \
 # d   e   f
-
-
 print(breadth_first_values(root_node)) # ['a', 'b', 'c', 'd', 'e', 'f']

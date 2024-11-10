@@ -41,6 +41,4 @@ root_node = a
 #   b   c
 #  / \   \
 # d   e   f
-
-
 print(depth_first_values(root_node)) # ['a', 'b', 'd', 'e', 'c', 'f']
