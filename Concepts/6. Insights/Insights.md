@@ -1,19 +1,16 @@
-#### Initiating recursive calls on left node & right node.
-If you are initiating recurisve calls in DFS, then it will be like
-```python
-recursive_call(root.left)
-recursive_call(root.right)
-```
-If you are initiating recurisve calls in BFS, then it will be like
-```python
-recursive_call(currrent.left)
-recursive_call(current.right)
-```
+#### Initiating recursive calls on left node & right node
+- If you are initiating recurisve calls in DFS, then it will be like
+  ```python
+  recursive_call(root.left)
+  recursive_call(root.right)
+  ```
+- If you are initiating recurisve calls in BFS, then it will be like
+  ```python
+  recursive_call(currrent.left)
+  recursive_call(current.right)
+  ```
 
-#### When to use DFS & when to use BFS?
-If the problem is asking for `closest path` / `smallest path`, then go for `BFS`, else `DFS`.
-
-#### Problems that has special base cases:
+#### Problems that has special base cases
 `max path sum` problem
 ```python
 def max_path_sum(root):
@@ -24,11 +21,31 @@ def max_path_sum(root):
         return root.val
     return root.val + max(max_path_sum(root.left), max_path_sum(root.right))
 ```
-`how high` problem.
+`how high` problem
 ```python
 def how_high(node):
     if node is None:
         return -1
+```
+
+#### `all_tree_paths` problem
+There are 2 things you need to be careful about.
+1. Base cases
+```python
+def _all_tree_paths(root):
+    if root is None:
+        return []
+
+    if root.left is None and root.right is None:
+        return [[root.val]]
+```
+2. You will get answer in reverse way. To correct it, do as below:
+```python
+def all_tree_paths(root):
+    paths = _all_tree_paths(root)
+    for path in paths:
+        path.reverse() 
+    return paths
 ```
 
 #### No need to check for node presence for initiating the recursive calls in DFS
@@ -38,7 +55,10 @@ def how_high(node):
   No need to check whether right node is present/not for initiaing the recursive call on right node.</br>
 - Where as there will no such base case when you are implementing the BFS algorithm.</br>
   Hence, you need to check for node presence before initiating the recursive call.
-  
+
+#### When to use DFS & when to use BFS?
+If the problem is asking for `closest path` / `smallest path`, then go for `BFS`, else `DFS`.
+
 #### Why DFS & BFS are bahaving the way they are behaving?
 Basically a tree can be traversed by using one of the following algorithms.
 1. DFS</br>
