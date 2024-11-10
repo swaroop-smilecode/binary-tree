@@ -1,3 +1,30 @@
+#### When to use DFS & when to use BFS?
+If the problem is asking for `closest path` / `smallest path`, then go for `BFS`, else `DFS`.
+
+#### Problems that has special base cases:
+`max path sum` problem
+```python
+def max_path_sum(root):
+    if root is None:
+        return float("-inf")
+    # This is an Edge case
+    if root.left is None and root.right is None:
+        return root.val
+    return root.val + max(max_path_sum(root.left), max_path_sum(root.right))
+```
+`how high` problem.
+```python
+def how_high(node):
+    if node is None:
+        return -1
+```
+
+#### No need to check for node presence for initiating the recursive call
+In tree problems there will be an obvious base case to of what to do when the node is None.</br>
+So, you no need to do any of the below checks.</br>
+No need to check whether left node is present/not for initiaing the recursive call on left node.</br>
+No need to check whether right node is present/not for initiaing the recursive call on right node.</br>
+
 #### Why DFS & BFS are bahaving the way they are behaving?
 Basically a tree can be traversed by using one of the following algorithms.
 1. DFS</br>
@@ -51,22 +78,3 @@ def breadth_first_values(root_node):
 
     return result
 ```
-#### When to use DFS & when to use BFS?
-If the problem is asking for `closest path` / `smallest path`, then go for `BFS`, else `DFS`.
-
-#### Max path sum problem has special edge case
-```python
-def max_path_sum(root):
-    if root is None:
-        return float("-inf")
-    # This is an Edge case
-    if root.left is None and root.right is None:
-        return root.val
-    return root.val + max(max_path_sum(root.left), max_path_sum(root.right))
-```
-
-#### No need to check for node presence for initiating the recursive call
-In tree problems there will be an obvious base case to of what to do when the node is None.</br>
-So, you no need to do any of the below checks.</br>
-No need to check whether left node is present/not for initiaing the recursive call on left node.</br>
-No need to check whether right node is present/not for initiaing the recursive call on right node.</br>
