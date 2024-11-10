@@ -2,8 +2,8 @@
 - BFS means, Breadth First Search</br>
 - It is implemented using `Queue`.</br>
 
-#### Ways of implementing bfs algorithm
-It is implemented in Iterative approach(By using queue data structure).
+#### Ways of implementing BFS algorithm
+It is implemented only in Iterative approach.
 
 #### Queue data structure
 - In Queue data structure, data is added from right side & popped from left side - hence, FIFO
