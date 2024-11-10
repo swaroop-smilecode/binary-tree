@@ -19,12 +19,14 @@ def how_high(node):
         return -1
 ```
 
-#### No need to check for node presence for initiating the recursive calls
-In tree problems there will be an obvious base case to of what to do when the node is None.</br>
-So, you no need to do any of the below checks.</br>
-No need to check whether left node is present/not for initiaing the recursive call on left node.</br>
-No need to check whether right node is present/not for initiaing the recursive call on right node.</br>
-
+#### No need to check for node presence for initiating the recursive calls in DFS
+- In tree problems there will be an obvious base case of what to do when the node is None.</br>
+  So, you no need to do any of the below checks.</br>
+  No need to check whether left node is present/not for initiaing the recursive call on left node.</br>
+  No need to check whether right node is present/not for initiaing the recursive call on right node.</br>
+- Where as there will no such base case when you are implementing the BFS algorithm.</br>
+  Hence, you need to check for node presence before initiating the recursive call.
+  
 #### Why DFS & BFS are bahaving the way they are behaving?
 Basically a tree can be traversed by using one of the following algorithms.
 1. DFS</br>
