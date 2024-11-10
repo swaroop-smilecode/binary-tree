@@ -19,7 +19,7 @@ def how_high(node):
         return -1
 ```
 
-#### No need to check for node presence for initiating the recursive call
+#### No need to check for node presence for initiating the recursive calls
 In tree problems there will be an obvious base case to of what to do when the node is None.</br>
 So, you no need to do any of the below checks.</br>
 No need to check whether left node is present/not for initiaing the recursive call on left node.</br>
