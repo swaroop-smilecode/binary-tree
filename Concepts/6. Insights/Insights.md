@@ -1,3 +1,15 @@
+#### Initiating recursive calls on left node & right node.
+If you are initiating recurisve calls in DFS, then it will be like
+```python
+recursive_call(root.left)
+recursive_call(root.right)
+```
+If you are initiating recurisve calls in BFS, then it will be like
+```python
+recursive_call(currrent.left)
+recursive_call(current.right)
+```
+
 #### When to use DFS & when to use BFS?
 If the problem is asking for `closest path` / `smallest path`, then go for `BFS`, else `DFS`.
 
