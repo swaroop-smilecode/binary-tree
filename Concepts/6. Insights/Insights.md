@@ -78,3 +78,8 @@ def breadth_first_values(root_node):
 
     return result
 ```
+#### If you are implementing BFS algorithm, then remember these methods:
+```python
+popleft()
+append()
+```
